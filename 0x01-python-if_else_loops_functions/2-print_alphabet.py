@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-result = "abcdefghijklmnopqrstuvwxyz"
-for n in range(1):
-    print(result, end='')
+for n in range(ord('a'), ord('z') + 1):
+    print(chr(n), end='')

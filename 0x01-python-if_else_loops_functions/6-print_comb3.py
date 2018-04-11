@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for n in range(1, 90):
-    if n != 89:
-        print("{:02d}, ".format(n), end='')
-print("{}".format(n))
+for n in range(0, 10):
+    if n != 8:
+        for j in range(0, 10):
+            if n < j:
+                print("{}{}, ".format(n, j), end='')
+print(89)

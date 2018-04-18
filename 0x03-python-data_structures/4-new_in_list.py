@@ -8,3 +8,4 @@ def new_in_list(my_list, idx, element):
         myduplicate = my_list[:]
         myduplicate[idx] = element
         return myduplicate
+    return my_list

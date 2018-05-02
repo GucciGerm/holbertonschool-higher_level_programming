@@ -12,7 +12,7 @@ class Square:
         size - is the size of the square
 
         Return:
-        None
+        We want to return the current square area
 
         """
 

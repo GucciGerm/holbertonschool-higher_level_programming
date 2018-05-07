@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+def uppercase(str):
+    for n in str:
+        if ord(n) >= ord('A') and ord(n) <= ord('Z'):
+           return True
+       else:
+           return False

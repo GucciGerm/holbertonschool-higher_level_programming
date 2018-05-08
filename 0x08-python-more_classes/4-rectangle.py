@@ -2,6 +2,7 @@
 class Rectangle:
     """ Creating a rectangle class """
     hashtag = "#"
+
     def __init__(self, width=0, height=0):
         """
         init allows us to create an instance
@@ -131,4 +132,3 @@ class Rectangle:
         str_rep = "Rectangle({}, {})".format(self.__width, self.__height)
 
         return str_rep
-

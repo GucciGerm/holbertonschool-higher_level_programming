@@ -5,6 +5,7 @@ class Rectangle:
     """
     number_of_instances = 0
     hashtag = "#"
+
     def __init__(self, width=0, height=0):
         """
         init allows us to create an instance
@@ -142,4 +143,4 @@ class Rectangle:
         We also get the oppourtinity decrement, removing an instance of a rect
         """
         Rectangle.number_of_instances -= 1
-        print ("Bye Rectangle...")
+        print("Bye rectangle...")

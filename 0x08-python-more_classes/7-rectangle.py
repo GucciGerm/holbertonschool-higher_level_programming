@@ -122,7 +122,7 @@ class Rectangle:
 
         for h in range(self.__height):
             for w in range(self.__width):
-                everynew_rectangle = everynew_rectangle + self.print_symbol
+                everynew_rectangle = everynew_rectangle + str(self.print_symbol)
             if h is not self.__height - 1:
                 everynew_rectangle = everynew_rectangle + "\n"
         return everynew_rectangle

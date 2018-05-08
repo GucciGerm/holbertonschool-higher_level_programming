@@ -4,7 +4,7 @@ class Rectangle:
     Creating a rectangle class and intializing the number of instances
     """
     number_of_instances = 0
-    hashtag = "#"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -122,7 +122,7 @@ class Rectangle:
 
         for h in range(self.__height):
             for w in range(self.__width):
-                everynew_rectangle = everynew_rectangle + "#"
+                everynew_rectangle = everynew_rectangle + self.print_symbol
             if h is not self.__height - 1:
                 everynew_rectangle = everynew_rectangle + "\n"
         return everynew_rectangle

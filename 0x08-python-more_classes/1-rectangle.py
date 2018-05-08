@@ -15,71 +15,79 @@ class Rectangle:
         Return:
         None
         """
-
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
         self.__width = width
+
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
         self.__height = height
 
-        @property
-        def height(self):
-            """
-            height - this is how tall the rectangle is
+    @property
+    def width(self):
+        """
+        width - this is how wide the rectangle is
 
-            Args:
+        Args:
             self - this allows an object to refer to itself
 
-            Return:
-            We will be returning the height
-            """
-            self.__height = height
-
-        @height.setter
-        def height(self, value):
-            """
-            height - this is how tall the rectangle is
-
-            Args:
-            self - this allows an object to refer to itself
-            value - this is what it's worth
-
-            Return:
-            We will set the property of the height
-            """
-
-            if type(value) != int:
-                raise TypeError("height must be an integer")
-            if value < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = value
-
-        @property
-        def width(self):
-            """
-            width - this is how wide the rectangle is
-
-            Args:
-            self - this allows an object to refer to itself
-
-            Return:
+        Return:
             We will be returning the width
-            """
+        """
 
-            self.__width = width
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """
-            width - this is how wide the rectangle is
+    @width.setter
+    def width(self, value):
+        """
+        width - this is how wide the rectangle is
 
-            Args:
+        Args:
             self - this allows an object to refer to itself
             value - this is what it's worth
 
-            Return:
+        Return:
             We will set the property of the width
-            """
+        """
 
-            if type(value) != int:
-                raise TypeError("width must be an integer")
-            elif value < 0:
-                raise ValueError("width must be >= 0")
-            self.__width = value
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """
+        height - this is how tall the rectangle is
+
+        Args:
+            self - this allows an object to refer to itself
+
+        Return:
+            We will be returning the height
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+        height - this is how tall the rectangle is
+
+        Args:
+            self - this allows an object to refer to itself
+            value - this is what it's worth
+
+        Return:
+            We will set the property of the height
+        """
+
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value

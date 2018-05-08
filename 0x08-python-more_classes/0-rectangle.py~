@@ -1,5 +1,0 @@
-#!/usr/bin/python3
-class Rectangle:
-    """ Creating a retangle class """
-    pass
-    """ Defining as a empty class """

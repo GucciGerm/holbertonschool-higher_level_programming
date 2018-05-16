@@ -3,7 +3,6 @@
 matrix division module
 """
 
-
 def matrix_divided(matrix, div):
 
     """
@@ -15,24 +14,31 @@ def matrix_divided(matrix, div):
     Return:
     You will need to return the new matrix
     """
+    MatrixError = "matrix must be a matrix (list of lists) of integers/floats"
+
     if type(matrix) != int and type(matrix) != float:
-        raise TypeError("matrix must be a matrix (list of lists)
-of integers/floats")
+        raise TypeError(MatrixError)
     if matrix is none:
-        raise TypeError("matrix must be a matrix (list of lists)
-of integers/floats")
-    if type(matrix) == str and type(matrix) == tuple:
-        raise TypeError("matrix must be a matrix (list of lists)
-of integers/floats")
+        raise TypeError(MatrixError)
+    if type(matrix) == str:
+        raise TypeError(MatrixError)
+    if type(matrix) == tuple:
+        raise TypeError(MatrixError)
     if div is 0:
         raise ZeroDivisionError("division by zero")
 
-    create_matrix = []
-    for row in range(len(matrix)):
-         create_matrix.append([])
-         for element in matrix[row]:
-             create_matrix[row].append(round((element/div), 2))
-    return create_matrix
+    for rows in matrix:
+        for elements in rows:
+            if not isinstance(elements, (int, float)):
+                raise TypeError(MatrixError)
+
+    new_matrix = []
+    for rows in matrix:
+         if not isinstance(div, (int, float)):
+             raise TypeError("div must be a number")
+         else:
+             new_matrix.append([round((element / div), 2) for element in rows])
+    return new_matrix
 
 if __name__ == "__main__":
     import doctest

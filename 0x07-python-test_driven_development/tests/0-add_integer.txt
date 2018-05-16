@@ -1,8 +1,8 @@
-0-add_integer Module:
-============================
+0-add_integer Module
+======================
 >>> add_integer = __import__('0-add_integer').add_integer
 
->>> add_integer(1 , 2)
+>>> add_integer(1, 2)
 3
 
 >>> add_integer(100, -2)

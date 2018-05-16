@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+class BaseGeometry:
+    """
+    Creating a class called BaseGeometry
+    """
+
+    def area(self):
+        """
+        area - This will check if area has been implemented
+        """
+
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """
+        integer_validator - This will validate the value to see if integer
+
+        Args:
+        name - (You can assume this is a string)
+        value - This is what we're validating
+
+        Return:
+        None
+        """
+        if type(value) != int:
+            raise TypeError("<name> must be an integer")
+        if type(value) <= 0:
+            raise ValueError("<name> must be greater than 0")

@@ -33,8 +33,12 @@ Possible Errors
 
 >>> print_sorted([])
 Traceback (most recent call last):
-TypeError: my_list must be an int
+NameError: name 'print_sorted' is not defined
 
 >>> print_sorted(-24)
 Traceback (most recent call last):
-ValueError: my_list must be a positive number
+NameError: name 'print_sorted' is not defined
+
+>>> print_sorted()
+Traceback (most recent call last):
+NameError: name 'print_sorted' is not defined

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 import os
 
 """
@@ -9,13 +9,13 @@ and we need to set filename(list) to "add_item.json"
 
 save_to_json_file = __import__("7-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("8-load_from_json_file").load_from_json_file
+
+
 filename = "add_item.json"
+if not os.path.exists(filename):
+    save_to_json_file([], filename)
+pythonlist = load_from_json_file(filename)
 
-if __name__ == "__main__":
-
-    pythonlist = []
-    if os.path.exists(filename):
-        pythonlist = load_from_json_file(filename)
-        for n in range(1, len(sys.argv)):
-            pythonlist.append(sys.argv[n])
-        save_to_json(pythonlist, filename)
+for n in range(1, len(argv)):
+    pythonlist.append(argv[n])
+save_to_json_file(pythonlist, filename)

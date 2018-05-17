@@ -1,19 +1,21 @@
 #!/usr/bin/python3
-from sys import argv
+import sys
+import os
+
 """
 Here we will be importing our save_to_json_file and load_from_json_file
+and we need to set filename(list) to "add_item.json"
 """
 
-save_to_json_file = __import__("7-save_to_json_file").7-save_to_json_file
-load_from_json_file = __import__("8-load_from_json_file").8-load_from_json_file
+save_to_json_file = __import__("7-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("8-load_from_json_file").load_from_json_file
+filename = "add_item.json"
 
-try:
-    load = load_from_json_file("8-load_from_json_file")
+if __name__ == "__main__":
 
-except:
-    load = []
-
-    for n, count in enumerate(argv):
-        if n > 0:
-            load.append(count)
-    save_to_json(text, "add_item.json")
+    pythonlist = []
+    if os.path.exists(filename):
+        pythonlist = load_from_json_file(filename)
+        for n in range(1, len(sys.argv)):
+            pythonlist.append(sys.argv[n])
+        save_to_json(pythonlist, filename)

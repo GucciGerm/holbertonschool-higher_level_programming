@@ -10,7 +10,8 @@ def number_of_lines(filename=""):
     Return:
     We will return the number of lines in our text file
     """
+    count = 0
     with open(filename) as n:
-        for lines, count in enumerate(n):
-            pass
-        return (lines + 1)
+        for lines in n:
+            count += 1
+        return (count)

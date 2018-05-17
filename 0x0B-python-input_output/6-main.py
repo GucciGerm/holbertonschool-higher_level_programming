@@ -15,11 +15,11 @@ print(my_dict)
 print(type(my_dict))
 
 try:
-        s_my_dict = """
+    s_my_dict = """
     {"is_active": true, 12 }
     """
-            my_dict = from_json_string(s_my_dict)
-                print(my_dict)
-                    print(type(my_dict))
+    my_dict = from_json_string(s_my_dict)
+    print(my_dict)
+    print(type(my_dict))
 except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    print("[{}] {}".format(e.__class__.__name__, e))

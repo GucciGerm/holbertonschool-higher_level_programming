@@ -7,18 +7,8 @@ Possible Errors
 
 ==========================
 
->>> print_sorted([])
-Traceback (most recent call last):
-NameError: name 'print_sorted' is not defined
-
->>> print_sorted(-24)
-Traceback (most recent call last):
-NameError: name 'print_sorted' is not defined
+>>> print_sorted([-24, 0])
+[-24, 0]
 
 >>> print_sorted([9, 8, 7, 6, 5])
 [5, 6, 7, 8, 9]
-
-
->>> print_sorted()
-Traceback (most recent call last):
-NameError: name 'print_sorted' is not defined

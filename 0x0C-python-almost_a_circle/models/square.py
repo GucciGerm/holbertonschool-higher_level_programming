@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    square.py
+"""
 from models.rectangle import Rectangle
 """
 importing the rectangle instance from models/rectangle
@@ -67,15 +70,12 @@ class Square(Rectangle):
             if key in kwargs and kwargs[key] is not None:
                 setattr(self, key, kwargs[key])
 
-
     def to_dictionary(self):
         """
         to_dictionary - This will return the dictionary representation
         of a square
 
         """
-
-
     def to_dictionary(self):
         """
         to_dictionary - Here we are creating the dictionary representation

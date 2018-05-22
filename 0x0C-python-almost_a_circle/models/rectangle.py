@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    rectangle.py
+"""
 from models.base import Base
 
 

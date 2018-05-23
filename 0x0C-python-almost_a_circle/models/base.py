@@ -131,7 +131,7 @@ class Base:
                       encoding="utf-8") as n:
                 listoinstances = cls.from_json_string(n.read())
 
-            for element in range(len(listofinstances)):
+            for element in range(len(listoinstances)):
                 listoinstances[element] = cls.create(**listoinstances[element])
             return (listoinstances)
         except:

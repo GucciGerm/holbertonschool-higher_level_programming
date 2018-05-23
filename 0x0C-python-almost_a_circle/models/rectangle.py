@@ -42,6 +42,29 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    @staticmethod
+    def validator(name, value):
+        """
+        validator - This will validate the value to see if
+        they are of the correct type
+
+        Args:
+        name - (You can assume this is a string)
+        value - This is what we're validating
+
+        Return:
+        None
+        """
+
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if name is "width" or name is "height":
+            if value < 0:
+                raise ValueError("{} must be > 0".format(name))
+        if name is "x" or name is "y":
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
+
     """
 
     Below we will we using getter/setters to make sure they are private

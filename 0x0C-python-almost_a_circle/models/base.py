@@ -29,30 +29,6 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def validator(name, value):
-        """
-        validator - This will validate the value to see if
-        they are of the correct type
-
-        Args:
-        name - (You can assume this is a string)
-        value - This is what we're validating
-
-        Return:
-        None
-
-        """
-
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if name is "width" or name is "height":
-            if value < 0:
-                raise ValueError("{} must be > 0".format(name))
-        if name is "x" or name is "y":
-            if value < 0:
-                raise ValueError("{} must be >= 0".format(name))
-
-    @staticmethod
     def to_json_string(list_dictionaries):
         """
         to_json_string - This will return the JSON string representation
@@ -145,7 +121,18 @@ class Base:
         Return:
         We will return a list of instances
         """
-        with open("{}.json".format(cls.__name__), mode="r",
-                  encoding="utf-8") as n:
-            if n is None:
-                return ([])
+        listoinstances = []
+        """
+        set an empty list
+        """
+        try:
+
+            with open("{}.json".format(cls.__name__), mode="r",
+                      encoding="utf-8") as n:
+                listoinstances = cls.from_json_string(n.read())
+
+            for element in range(len(listofinstances)):
+                listoinstances[element] = cls.create(**listoinstances[element])
+            return (listoinstances)
+        except:
+            return (listoinstances)

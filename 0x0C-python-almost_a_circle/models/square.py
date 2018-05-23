@@ -39,7 +39,7 @@ class Square(Rectangle):
 
         """
 
-        return ("[Square] {} {}/{} - {}".format(self.id, self.x,
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                 self.y, self.height))
 
     @property

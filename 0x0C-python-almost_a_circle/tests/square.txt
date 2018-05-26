@@ -1,0 +1,10 @@
+===============
+The Square Module
+
+===================
+
+>>> fromm models.square import Square
+
+>>> if __name__ == "__main__":
+
+>>> Square

@@ -1,0 +1,51 @@
+The rectangle module
+
+>>> from models.rectangle import Rectangle
+
+>>> Rectangle(10, "str", 4, 5, 3)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> Rectangle(10, {}, 4, 5, 6)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> Rectangle(-1, 5, 4, 5, 2)
+Traceback (most recent call last):
+ValueError: height must be > 0
+
+>>> Rectangle(5, -1, 2, 4, 6)
+Traceback (most recent call last):
+ValueError: width must be > 0
+
+>>> Rectangle(5, [], 2, 5, 1)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> Rectangle(4, 5, 6, -2, 4)
+Traceback (most recent call last):
+TypeError: y must be >= 0
+
+>>> Rectangle(4, 5, [], 2, 3)
+Traceback (most recent call last):
+TypeError: x must be an integer
+
+>>> Rectangle(4, 5, {}, 2, 3)
+Traceback (most recent call last):
+TypeError: x must be an integer
+
+>>> Rectangle([], 2, 3, 4, 5)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> Rectangle({}, 2, 3, 4, 5)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> Rectangle("str", 2, 3, 4, 5)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> Rectangle(" ", 2, 3, 4, 5)
+Traceback (most recent call last):
+TypeError: height must be an integer

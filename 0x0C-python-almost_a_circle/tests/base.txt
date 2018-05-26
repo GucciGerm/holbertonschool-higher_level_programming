@@ -1,0 +1,6 @@
+==========================
+This is the base.py module
+
+==========================
+
+>>> from models.base import Base

@@ -35,11 +35,11 @@ ValueError: age must be an integer
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
->>> bg.integer_validator("name", [])
+>>> bg.integer_validator("name", [5])
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> bg.integer_validator("name", (2, 0))
+>>> bg.integer_validator("name", (2,))
 Traceback (most recent call last):
 TypeError: name must be an integer
 
@@ -47,8 +47,10 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-
-
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> bg.integer_validator("string")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'string'

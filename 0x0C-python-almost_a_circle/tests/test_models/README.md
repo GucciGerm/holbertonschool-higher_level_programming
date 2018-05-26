@@ -1,0 +1,1 @@
+These are the test classes for base rectangle and square

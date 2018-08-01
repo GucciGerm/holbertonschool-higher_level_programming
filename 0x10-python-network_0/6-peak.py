@@ -23,7 +23,7 @@ def find_peak(list_of_integers):
            list_of_integers[mid + 1] <= list_of_integers[mid]:
             return (list_of_integers[mid])
 
-    except:
+    except BaseException:
         if list_of_integers[mid - 1] < list_of_integers[mid]:
             return (list_of_integers[mid])
 

@@ -8,18 +8,18 @@ class Rectangle {
       this.width = w;
       this.height = h;
     }
-    this.print = function () {
-      // Need to create loops for accounting for width & height
-      let a;
-      let b;
-      for (a = 0; a < h; a++) {
-        let size = '';
-        for (b = 0; b < w; b++) {
-          size += 'X';
-        }
-        console.log(size);
+  }
+  print () {
+    // Need to create loops for accounting for width & height
+    let a;
+    let b;
+    for (a = 0; a < this.height; a++) {
+      let size = '';
+      for (b = 0; b < this.width; b++) {
+        size += 'X';
       }
-    };
+      console.log(size);
+    }
   }
 }
 

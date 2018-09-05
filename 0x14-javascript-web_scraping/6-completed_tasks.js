@@ -15,6 +15,7 @@ request(process.argv[2], (error, response, body) => {
       let objective = arg[count];
       if (objective['completed'] === true) {
         if (completed[objective['userId']] !== undefined) {
+	  // Only include +1 if userId present and true
           completed[objective['userId']] += 1;
         } else {
           completed[objective['userId']] = 1;
